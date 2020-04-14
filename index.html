@@ -15,14 +15,40 @@
       border: solid .2em #fff;
       height: 90vh;
     }
+
+    .container {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+
+    h3,
+    span {
+      color: red;
+    }
+
+    h4 {
+      color: black;
+    }
   </style>
 </head>
 
 <body>
-  <h1>TetrisGame by Costel-dev</h1>
-  <div id="score" style="color: red"></div>
-  <canvas id="tetris" width="240" height="400">
-    <script src="tetris.js"></script>
+  <h1>TetrisGame <span>by</span> Costel-dev</h1>
+  <div class="container">
+    <div>
+      <div id="score" style="color: red"></div>
+      <canvas id="tetris" width="240" height="400"></canvas>
+    </div>
+    <div>
+      <h3>Instructions:</h3>
+      <h4><span>Q</span> - rotate the piece</h4>
+      <h4><span>&#8592;</span> move piece to the left</h4>
+      <h4><span>&#8594;</span> move piece to the right</h4>
+      <h4><span>&#8595;</span> drop the piece</h4>
+    </div>
+  </div>
+  <script src="tetris.js"></script>
 </body>
 
 </html>

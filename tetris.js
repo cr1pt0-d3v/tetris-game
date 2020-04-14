@@ -41,76 +41,44 @@ function createPiece(type) {
       [0, 1, 0, 0],
       [0, 1, 0, 0],
       [0, 1, 0, 0],
-      [0, 1, 0, 0]
+      [0, 1, 0, 0],
     ];
   } else if (type === "L") {
     return [
       [2, 0, 0],
       [2, 0, 0],
-      [2, 2, 0]
+      [2, 2, 0],
     ];
   } else if (type === "J") {
     return [
       [0, 3, 0],
       [0, 3, 0],
-      [3, 3, 0]
+      [3, 3, 0],
     ];
   } else if (type === "O") {
     return [
       [4, 4],
-      [4, 4]
+      [4, 4],
     ];
   } else if (type === "Z") {
     return [
       [0, 0, 0],
       [5, 5, 0],
-      [0, 5, 5]
+      [0, 5, 5],
     ];
   } else if (type === "S") {
     return [
       [0, 0, 0],
       [0, 6, 6],
-      [6, 6, 0]
+      [6, 6, 0],
     ];
   } else if (type === "T") {
     return [
       [0, 0, 0],
       [7, 7, 7],
-      [0, 7, 0]
+      [0, 7, 0],
     ];
   }
-  /*  switch (type) {
-    case "I":
-      [
-        [0, 1, 0, 0],
-        [0, 1, 0, 0],
-        [0, 1, 0, 0],
-        [0, 1, 0, 0]
-      ];
-      break;
-    case "L":
-      [
-        [2, 0, 0],
-        [2, 0, 0],
-        [2, 2, 0]
-      ];
-      break;
-    case "J":
-     
-      break;
-    case "O":
-      
-      break;
-    case "Z":
-     
-      break;
-    case "S":
-      
-      break;
-    case "T":
-      
-      break; 
-  } */
 }
 
 /* ************************************************************************* */
@@ -267,7 +235,7 @@ function rotate(matrix, dir) {
 
   if (dir > 0) {
     // if dir is positive
-    matrix.forEach(row => row.reverse());
+    matrix.forEach((row) => row.reverse());
   } else {
     matrix.reverse();
   }
@@ -292,7 +260,7 @@ function playerReset() {
   if (collide(arena, player)) {
     // if the game area is full with pieces and there is no space for new one, collide arena and player
 
-    arena.forEach(row => row.fill(0)); // clear the arena
+    arena.forEach((row) => row.fill(0)); // clear the arena
     // remove everything from the arena
 
     player.score = 0; // set the player score zero
@@ -423,7 +391,7 @@ const colors = [
   "#F538FF", // color for piece index 4
   "#FF8E0D", // color for piece index 5
   "#FFE138", // color for piece index 6
-  "#3877FF" // color for piece index 7
+  "#3877FF", // color for piece index 7
 ];
 
 /* ************************************************************************* */
@@ -470,7 +438,7 @@ function update(time = 0) {
 
 /* PART 16: addEventListener('keydown', event) : These codes triggered everytime when we push the keyboard */
 
-document.addEventListener("keydown", event => {
+document.addEventListener("keydown", (event) => {
   // These codes triggered everytime when we push the keyboard
 
   //console.log(event); // event keyCode is important for us
@@ -532,7 +500,7 @@ const player = {
   // set default initial values for player
   pos: { x: 0, y: 0 }, // position for top and let
   matrix: null, // matrix for each pieces
-  score: 0
+  score: 0,
 };
 
 /* ************************************************************************* */
